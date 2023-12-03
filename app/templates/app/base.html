@@ -1,11 +1,16 @@
+{% load django_htmx static %}
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="{% static 'app/img/favicon.ico' %}">
         {% block title %}
         <title>Demo</title>
         {% endblock %}
+        <script src="{% static 'app/js/htmx.min.js' %}" defer></script>
+        {% django_htmx_script %}
     </head>
     <body>
         <main>
